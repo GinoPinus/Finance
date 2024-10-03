@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ results["symbol"] }}</td>
+                <td>{{ results["price"] | usd }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/quote" class="btn btn-primary">Search again</a>
+{% endblock %}
